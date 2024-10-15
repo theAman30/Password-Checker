@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Checker</title>
+    <!-- External CSS file linking  -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- favicon icon linking  -->
+    <link rel="shortcut icon" href="favicon-icon.png" type="image/x-icon" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Password Checker</title>
-  <!-- External CSS file linking  -->
-  <link rel="stylesheet" href="styles.css" />
-  <!-- favicon icon linking  -->
-  <link rel="shortcut icon" href="favicon-icon.png" type="image/x-icon">
-</head>
+  <body>
+    <div class="container">
+      <h1>Create New Password</h1>
+      <p>
+        Your new Password must be different<br />from previous used Password.
+      </p>
 
-<body>
-  <div class="container">
-    <h1>Create New Password</h1>
-    <p>Your new Password must be different<br />from previous used Password.</p>
+      <div class="new-password">
+        <h3>New Password</h3>
+        <input
+          type="password"
+          class="new-password-input"
+          placeholder="Create Password"
+        />
+        <i class="fa-solid fa-eye" onclick="passToggle()"></i>
+        <i class="fa-solid fa-eye-slash" onclick="passToggle()"></i>
+        <p>Must be at least 8 characters</p>
+      </div>
 
-    <div class="new-password">
-      <h3>New Password</h3>
-      <input type="password" class="new-password-input" placeholder="Create Password" />
-      <i class="fa-solid fa-eye" onclick="passToggle()"></i>
-      <i class="fa-solid fa-eye-slash" onclick="passToggle()"></i>
-      <p>Must be at least 8 characters</p>
+      <div class="confirm-password">
+        <h3>Confirm Password</h3>
+        <input
+          type="password"
+          class="confirm-password-input"
+          placeholder="Confirm Password"
+        />
+      </div>
+      <p class="message">Both passwords must match.</p>
+      <button class="reset-button" onclick="passCheck()">Check</button>
     </div>
+  </body>
 
-    <div class="confirm-password">
-      <h3>Confirm Password</h3>
-      <input type="password" class="confirm-password-input" placeholder="Confirm Password" />
-    </div>
-    <p class="message">Both passwords must match.</p>
-    <button class="reset-button" onclick="passCheck()">Check</button>
-  </div>
-</body>
-
-
-<!-- font awesome file linking  -->
-<script src="https://kit.fontawesome.com/e3c3b41231.js" crossorigin="anonymous"></script>
-<!-- External JS file linking  -->
-<script src="script.js"></script>
-
+  <!-- font awesome file linking  -->
+  <script
+    src="https://kit.fontawesome.com/e3c3b41231.js"
+    crossorigin="anonymous"
+  ></script>
+  <!-- External JS file linking  -->
+  <script src="script.js"></script>
 </html>
